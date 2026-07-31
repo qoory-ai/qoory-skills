@@ -3,7 +3,7 @@
   "name": "io.github.qoory-ai/qoory",
   "title": "Qoory Crypto Intelligence",
   "description": "One Data Plane for crypto research, with 42 live tools for entities, markets, funding, narratives, news, events, and signals.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "websiteUrl": "https://docs.qoory.ai/developers/remote-mcp",
   "remotes": [
     {
