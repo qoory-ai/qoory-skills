@@ -1,0 +1,42 @@
+name: Publish Smithery
+
+on:
+  workflow_dispatch:
+    inputs:
+      resume:
+        description: Resume a publish paused for OAuth authorization
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      SMITHERY_API_KEY: ${{ secrets.SMITHERY_API_KEY }}
+
+    steps:
+      - name: Validate publishing secret
+        run: test -n "$SMITHERY_API_KEY"
+
+      - name: Claim Qoory namespace
+        if: ${{ !inputs.resume }}
+        run: |
+          curl --fail-with-body --request PUT \
+            --url https://api.smithery.ai/namespaces/qoory-ai \
+            --header "Authorization: Bearer $SMITHERY_API_KEY"
+
+      - name: Publish Qoory Remote MCP
+        if: ${{ !inputs.resume }}
+        run: |
+          npx --yes smithery@1.1.1 mcp publish \
+            https://api.qoory.ai/mcp \
+            --name qoory-ai/qoory
+
+      - name: Resume OAuth-authorized publish
+        if: ${{ inputs.resume }}
+        run: npx --yes smithery@1.1.1 mcp publish --resume
