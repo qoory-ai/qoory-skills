@@ -84,5 +84,6 @@ jobs:
               "displayName": "Qoory Crypto Intelligence",
               "description": "Research crypto projects, markets, narratives, news, funding, people, funds, tokens, events, and X accounts with live Qoory intelligence.",
               "homepage": "https://docs.qoory.ai/developers/remote-mcp",
+              "iconUrl": "https://www.qoory.ai/icon-512.png",
               "unlisted": false
             }'
