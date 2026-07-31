@@ -1,6 +1,6 @@
 # Qoory Skills
 
-Give AI coding agents a reusable crypto intelligence workflow backed by Qoory's remote MCP server and Developer API.
+Give AI agents a reusable crypto intelligence workflow backed by Qoory's Remote MCP server and Developer API. Qoory is One Data Plane for crypto research, with 42 typed operations spanning entities, markets, narratives, news, funding, and signals.
 
 ## Install
 
@@ -24,7 +24,7 @@ The Qoory Skill helps an agent:
 
 The Skill uses Qoory Remote MCP at `https://api.qoory.ai/mcp` and can fall back to the REST API when needed. Authentication, credits, rate limits, and access controls are enforced by Qoory's hosted service; this repository contains no credentials or application source.
 
-Developer access is currently a limited beta. See [Qoory documentation](https://docs.qoory.ai/developers/skills) for setup details.
+See [Qoory documentation](https://docs.qoory.ai/developers/skills) for setup details, authentication, credits, and request limits.
 
 ## Package
 

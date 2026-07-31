@@ -5,7 +5,7 @@ description: "Crypto intelligence for AI agents. Use Qoory for project discovery
 
 # Qoory Crypto Intelligence
 
-Qoory is a crypto intelligence engine with 42 typed research operations. This Skill turns those operations into a coherent research workflow instead of treating them as isolated API calls. It is in an admin-only beta; an explicit server-side preview flag may also grant access to selected testers.
+Qoory is One Data Plane for crypto research, with 42 typed operations. This Skill turns those operations into a coherent research workflow instead of treating them as isolated API calls.
 
 ## What Qoory Covers
 

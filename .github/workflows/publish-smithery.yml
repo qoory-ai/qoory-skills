@@ -82,7 +82,7 @@ jobs:
             --header "Content-Type: application/json" \
             --data '{
               "displayName": "Qoory Crypto Intelligence",
-              "description": "Research crypto projects, markets, narratives, news, funding, people, funds, tokens, events, and X accounts with live Qoory intelligence.",
+              "description": "One Data Plane for crypto research: 42 live tools across projects, markets, narratives, news, funding, people, funds, tokens, events, stocks, and X accounts.",
               "homepage": "https://docs.qoory.ai/developers/remote-mcp",
               "iconUrl": "https://www.qoory.ai/icon-512.png",
               "unlisted": false
