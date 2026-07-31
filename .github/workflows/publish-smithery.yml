@@ -52,7 +52,7 @@ jobs:
                 --url https://api.smithery.ai/servers/qoory-ai%2Fqoory/releases \
                 --header "Authorization: Bearer $SMITHERY_API_KEY"
             )"
-            status="$(jq --raw-output '.[0].status' <<<"$releases")"
+            status="$(jq --raw-output '(.releases // .)[0].status' <<<"$releases")"
             echo "Smithery release status: $status"
 
             case "$status" in
