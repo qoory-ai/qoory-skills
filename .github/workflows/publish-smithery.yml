@@ -73,3 +73,16 @@ jobs:
 
           echo "Smithery release did not finish within five minutes."
           exit 1
+
+      - name: Publish Smithery catalog metadata
+        run: |
+          curl --fail-with-body --request PATCH \
+            --url https://api.smithery.ai/servers/qoory-ai%2Fqoory \
+            --header "Authorization: Bearer $SMITHERY_API_KEY" \
+            --header "Content-Type: application/json" \
+            --data '{
+              "displayName": "Qoory Crypto Intelligence",
+              "description": "Research crypto projects, markets, narratives, news, funding, people, funds, tokens, events, and X accounts with live Qoory intelligence.",
+              "homepage": "https://docs.qoory.ai/developers/remote-mcp",
+              "unlisted": false
+            }'
